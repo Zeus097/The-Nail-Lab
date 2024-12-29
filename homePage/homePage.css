@@ -14,6 +14,8 @@ header {
     background: #8fb9a3;
     color: #FFF;
     align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding-top: 5px;
 }
 
 .logo img {
@@ -30,4 +32,34 @@ nav ul li {
     list-style: none;
     font-size: 1.2rem;
     font-weight: 700;
+}
+
+@media screen and (max-width: 800px) {
+
+    header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background: #8fb9a3;
+        color: #FFF;
+        align-items: center;
+        padding: 20px 0px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    nav ul li {
+        display: flex;
+        
+        list-style: none;
+        font-size: 1.2rem;
+        font-weight: 700;
+    }
+    
 }
