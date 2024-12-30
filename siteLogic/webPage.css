@@ -253,7 +253,7 @@ footer {
 
 
     .get-in-touch {
-        color: rgb(255, 255, 255);
+        color: black;
         display: flex;
         flex-direction: column;
     }
