@@ -35,17 +35,18 @@ header {
     text-align: center;
     align-items: center;
     padding: 0px 0px;
-    background: #FFF;
+    background: #302e2e;
 }
 
 .welcome-img {
     height: 5vh;
     width: 100%;
-    padding: 20px;
     background-image: url('images/nails-collage.png');
     background-repeat: repeat;
     background-size: contain;
     animation: moveBackground 190s linear infinite;
+    
+    margin: 20px;
 }
 
 .mainMenu {
