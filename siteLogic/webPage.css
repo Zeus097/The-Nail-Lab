@@ -62,10 +62,11 @@ header {
     top: 100%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: #8fb9a3;
+    background: rgb(255, 123, 171);
     height: 52px;
     width: 470px;
     border-radius: 20px;
+    border: 4px solid #FFF;
     align-items: center;
     padding: 20px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
@@ -92,6 +93,7 @@ header .nav-menu {
 .nav-menu nav ul {
     display: flex;
     gap: 10px;
+    box-shadow: 0px 9px 30px 0px rgb(255, 123, 171);
 }
 
 .nav-menu nav ul li {
@@ -160,6 +162,7 @@ main {
     max-width: 470px;
     width: 100%;
     border-radius: 50px ;
+    box-shadow: 0px 9px 30px 0px rgba(254,22,109,1);
 }
 
 .appointment-form label {
@@ -363,6 +366,7 @@ footer {
         color: #FFF;
         gap: 10px;
         align-items: center;
+        box-shadow: 0px 9px 30px 0px rgba(254,22,109,1);
     }
 
     .nav-menu nav ul li {
@@ -383,13 +387,13 @@ footer {
         top: auto;
         left: auto;
         transform: none;
-        background: #8fb9a3;
+        background: rgb(255, 123, 171);
         height: 100%;
         width: 240px;
         border-radius: 20px;
+        border: 5px solid #FFF;
         align-items: center;
         padding: 20px;
-        border: 5px solid #FFF;
     }
 
     .mainMenu li {
@@ -404,6 +408,7 @@ footer {
         max-width: 100%;
         width: 70%;
         border-radius: 50px ;
+        box-shadow: 0px 9px 30px 0px rgba(254,22,109,1);
     }
 
     .appointment-img {
