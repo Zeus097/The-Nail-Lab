@@ -144,7 +144,8 @@ main {
     display: flex;
     flex-direction: column;
     text-align: center;
-    max-width: 400px;
+    max-width: 470px;
+    min-width: 470px;
     margin: 0 auto;
     padding: 20px;
     background: #fff;
@@ -157,7 +158,7 @@ main {
 }
 
 .appointment-img img {
-    max-width: 100%;
+    max-width: 470px;
     width: 100%;
     border-radius: 50px ;
 }
