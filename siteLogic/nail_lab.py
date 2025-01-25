@@ -35,8 +35,8 @@ def book_appointment():
     try:
         conn = psycopg2.connect(
             database="nail_lab",
-            user="postgres",
-            password="0897535532",
+            user="***",
+            password="***",
             host="localhost",
             port="5432"
         )
@@ -80,10 +80,10 @@ def send_notification_email(start_time, end_time, test_type):
     import smtplib
     from email.mime.text import MIMEText
 
-    SMTP_SERVER = "smtp.abv.bg"
-    SMTP_PORT = 465
-    EMAIL_ADDRESS = "test_subject@abv.bg"
-    EMAIL_PASSWORD = "3EGZln1aYM"
+    SMTP_SERVER = "***"
+    SMTP_PORT = ''# pass in digits, without '' 
+    EMAIL_ADDRESS = "***g"
+    EMAIL_PASSWORD = "***"
 
     subject = "New Appointment Booking"
     body = f"""
@@ -96,7 +96,7 @@ def send_notification_email(start_time, end_time, test_type):
     msg = MIMEText(body)
     msg["Subject"] = subject
     msg["From"] = EMAIL_ADDRESS
-    msg["To"] = "test@mail.com"
+    msg["To"] = "test_subject@abv.bg"
 
     with smtplib.SMTP_SSL(SMTP_SERVER, SMTP_PORT) as server:
         server.login(EMAIL_ADDRESS, EMAIL_PASSWORD)
