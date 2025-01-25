@@ -1,8 +1,10 @@
 from flask import Flask, request
+from flask_cors import CORS
 import psycopg2
 from datetime import datetime, timedelta
 
 app = Flask(__name__)
+CORS(app, resources={r"/*": {"origins": "http://127.0.0.1:5500"}})
 
 
 @app.route("/", methods=["POST"])
@@ -19,9 +21,11 @@ def book_appointment():
     except ValueError:
         return "Invalid date format! Use 'YYYY-MM-DD HH:MM'", 400
 
-    if test_type == "Test 1":
+    if test_type == "Изграждане":
         test_duration = 2  # 2 hours
-    elif test_type == "Test 2":
+    elif test_type == "Лакиране":
+        test_duration = 4  # 4 hours
+    elif test_type == "Поправяне на нокти":
         test_duration = 4  # 4 hours
     else:
         return "Invalid test type!", 400

@@ -5,7 +5,8 @@
 
 
 
-@import '@fontsource-variable/jetbrains-mono';
+ @import url('./node_modules/@fontsource-variable/jetbrains-mono/css.css');
+
 
 @keyframes moveBackground {
     from {
