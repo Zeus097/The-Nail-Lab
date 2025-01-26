@@ -4,7 +4,7 @@ import psycopg2
 from datetime import datetime, timedelta
 
 app = Flask(__name__)
-CORS(app, resources={r"/*": {"origins": "http://127.0.0.1:5500"}})
+CORS(app, resources={r"/*": {"origins": ["http://localhost:5500"]}})
 
 
 @app.route("/", methods=["POST"])
