@@ -29,52 +29,42 @@ flatpickr("#date", {
     minDate: "today",
     minuteIncrement: 30,
     disable: [
-
         function(date) {
-            return (date.getDay() === 0 || date.getDay() === 6);
+            return date.getDay() === 0 || date.getDay() === 6; // Disable weekends
         }
-            ],
-
+    ],
     time_24hr: true,
     onReady: function(selectedDates, dateStr, instance) {
-
         instance.config.onChange.push(function(selectedDates, dateStr, instance) {
-            
             const time = selectedDates[0].getHours();
-            
             if (time < 10 || time >= 18) {
                 alert("Изберете час между 10:00 и 18:00!");
                 instance.clear();
-
             }
-
         });
-
     }
-
 });
-
 
 const form = document.getElementById("appointment-form");
 form.addEventListener("submit", async (e) => {
-    
     e.preventDefault();
 
     const formData = new FormData(form);
-    const data = Object.fromEntries(formData);
 
-    const response = await fetch("http://localhost:5000", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data)
-    });
+    try {
+        const response = await fetch("http://127.0.0.1:5000/", {
+            method: "POST",
+            body: formData
+        });
 
-    if (response.ok) {
-        alert("Часът е записан успешно!");
-        form.reset();
-    
-    } else {
-        alert("Възникна грешка. Моля, опитайте отново.");
+        if (response.ok) {
+            alert("Часът е записан успешно!");
+            form.reset();
+        } else {
+            const errorMessage = await response.text();
+            alert(`Възникна грешка: ${errorMessage}`);
+        }
+    } catch (error) {
+        alert(`Възникна грешка: ${error.message}`);
     }
-    
 });

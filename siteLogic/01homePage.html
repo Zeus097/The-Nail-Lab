@@ -68,31 +68,31 @@ SOFTWARE.
 
             <div class="appointment-content">
 
-                <form class="appointment-form" id="appointment-form" action="http://localhost:5000/" method="POST">
-    
+                <form class="appointment-form" id="appointment-form" action="http://127.0.0.1:5500" method="POST">
                     <label for="service">Изберете услуга:</label>
                     <select id="service" name="service" required>
                         <option value="">-- Изберете --</option>
-                        <option value="мъжка подстрижка">Изграждане</option>
-                        <option value="женска подстрижка">Лакиране</option>
-                        <option value="детска подстрижка">Поправяне на нокти</option>
+                        <option value="Изграждане">Изграждане</option>
+                        <option value="Лакиране">Лакиране</option>
+                        <option value="Поправяне на нокти">Поправяне на нокти</option>
                     </select>
-            
+                
                     <label for="date">Изберете дата и час:</label>
                     <input type="text" id="date" name="date" required />
-            
-                    <label for="name">Вашито име:</label>
-                    <input type="text" id="name" name="first_name name" placeholder="Име..." required />
-
-                    <label for="name">Вашата фамилия:</label>
-                    <input type="text" id="name" name="last_name name" placeholder="Фамилия..." required />
-            
+                
+                    <label for="first_name">Вашето име:</label>
+                    <input type="text" id="first_name" name="first_name" placeholder="Име..." required />
+                
+                    <label for="last_name">Вашата фамилия:</label>
+                    <input type="text" id="last_name" name="last_name" placeholder="Фамилия..." required />
+                
                     <label for="phone">Телефон за връзка:</label>
                     <input type="tel" id="phone" name="phone" placeholder="Вашият телефон" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" required />
-            
+                
                     <button type="submit">Запази час</button>
-    
                 </form>
+                
+                
             
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.9/flatpickr.min.js"></script>
                 <script src="script.js"></script>
