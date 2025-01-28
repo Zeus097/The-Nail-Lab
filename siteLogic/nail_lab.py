@@ -3,6 +3,9 @@ from flask_cors import CORS
 import psycopg2
 from datetime import datetime, timedelta
 
+import logging
+logging.basicConfig(level=logging.DEBUG)
+
 app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": ["http://127.0.0.1:5500"]}})
 
@@ -38,7 +41,7 @@ def book_appointment():
             database="PRIVATE",
             user="PRIVATE",
             password="PRIVATE",
-            host="PRIVATE",
+            host="localhost",
             port="PRIVATE"
         )
         cursor = conn.cursor()
@@ -81,18 +84,18 @@ def send_notification_email(start_time, end_time, test_type, first_name, last_na
     from email.mime.text import MIMEText
 
     SMTP_SERVER = "PRIVATE"
-    SMTP_PORT = "PRIVATE" # It is num without the ""...
+    SMTP_PORT = "PRIVATE"
     EMAIL_ADDRESS = "PRIVATE"
     EMAIL_PASSWORD = "PRIVATE"
 
-    subject = "New Appointment Booking"
+    subject = "Ново записване за час"
     body = f"""
-    A new appointment has been booked:
-    - Name: {first_name} {last_name}
-    - Phone: {phone}
-    - Test Type: {test_type}
-    - Start Time: {start_time}
-    - End Time: {end_time}
+    Записан е нов час:
+    - Име: {first_name} {last_name}
+    - Телефон: {phone}
+    - Вид услуга: {test_type}
+    - Начало: {start_time}
+    - Край: {end_time}
     """
 
     msg = MIMEText(body)
@@ -103,14 +106,17 @@ def send_notification_email(start_time, end_time, test_type, first_name, last_na
     try:
 
         with smtplib.SMTP_SSL(SMTP_SERVER, SMTP_PORT) as server:
-
+            server.set_debuglevel(1)
             server.login(EMAIL_ADDRESS, EMAIL_PASSWORD)
             server.send_message(msg)
-            print("Notification email sent successfully!")
+            print("Имейлът беше изпратен успешно!")
 
+    except smtplib.SMTPAuthenticationError:
+        print("Грешка при автентикация: Проверете имейла или паролата си.")
+    except smtplib.SMTPException as e:
+        print(f"Грешка при SMTP: {e}")
     except Exception as e:
-
-        print(f"Failed to send email: {e}")
+        print(f"Възникна неочаквана грешка: {e}")
 
 if __name__ == "__main__":
     app.run(debug=True)
