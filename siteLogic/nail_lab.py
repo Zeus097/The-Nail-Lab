@@ -101,7 +101,7 @@ def send_notification_email(start_time, end_time, test_type, first_name, last_na
     msg = MIMEText(body)
     msg["Subject"] = subject
     msg["From"] = EMAIL_ADDRESS
-    msg["To"] = "test_subject@abv.bg"
+    msg["To"] = "PRIVATE"
 
     try:
 
