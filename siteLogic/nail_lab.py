@@ -79,6 +79,7 @@ def book_appointment():
     except Exception as e:
         return f"An error occurred: {e}", 500
 
+# TO REFACTOR THIS FUNCTION AND MOVE IT TO SEPARATED FILE.
 def send_notification_email(start_time, end_time, test_type, first_name, last_name, phone):
     import smtplib
     from email.mime.text import MIMEText
