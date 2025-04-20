@@ -50,6 +50,8 @@ This project is a responsive appointment booking interface for a nail studio. It
                     \\[[[ alert("Изберете час между 10:00 и 18:00!"); ]]]//
                     …and the date input is reset.
 
+        The form with ID appointment-form uses fetch() to send an asynchronous POST request to a backend endpoint (default)
+
     Responsive Design:
         The layout adapts for screens under 800px:
         Navigation switches to vertical menu.
@@ -58,9 +60,13 @@ This project is a responsive appointment booking interface for a nail studio. It
         Adjustments to padding and widths for mobile comfort.
             
     Footer:
-        Split contact/info sections with themed colors and rounded containers.
+        Split contact/info sections with themed colors and rounded containers.<br><br>
 
-    
+
+
+
+    Backend (Flask)
+        This app provides a simple Flask-based API to handle appointment bookings with PostgreSQL integration and email notifications.
 
 
 
