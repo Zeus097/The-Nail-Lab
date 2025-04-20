@@ -32,9 +32,12 @@ This project is a responsive appointment booking interface for a nail studio. It
 
 
 ### The UI is focusing on a clean layout with responsive behavior.
-    Header: Moving background with a seamless nail collage using @keyframes moveBackground.
-
-
+    Header: 
+        Moving background with a seamless nail collage using @keyframes moveBackground.
+    Main Section (Appointment Form):
+        Clean form styling with: 
+            Rounded corners, Light shadows, Focus on readability and input validation (:invalid border coloring).
+            
 
 
 
