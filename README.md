@@ -66,7 +66,7 @@ This project is a responsive appointment booking interface for a nail studio. It
 
 
 <br><br><br>
-### Backend (Flask)
+## Backend (Flask)
 
     This app provides a simple Flask-based API to handle appointment bookings with PostgreSQL integration and email notifications.
     I managed to connect the DB to the form. It was my first time facing this method. When I started this project I was not familiar with Django ORM and instead of creating Django Project I used Flask.
