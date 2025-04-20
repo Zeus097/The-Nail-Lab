@@ -34,11 +34,33 @@ This project is a responsive appointment booking interface for a nail studio. It
 ### The UI is focusing on a clean layout with responsive behavior.
     Header: 
         Moving background with a seamless nail collage using @keyframes moveBackground.
+        
     Main Section (Appointment Form):
         Clean form styling with: 
             Rounded corners, Light shadows, Focus on readability and input validation (:invalid border coloring).
-            
 
+        Date & Time Picker (Flatpickr):
+            The project uses Flatpickr v4.6.9 to enhance the date-time input with an intuitive UI and built-in restrictions.
+            Features:
+                Date format: YYYY-MM-DD HH:MM
+                Time selection: Enabled, 24-hour format
+                Interval: 30-minute steps
+                Restrictions: No appointments on weekends, Only between 10:00 and 18:00, Disables past dates
+                If a user tries to book outside of working hours, a popup appears:
+                    \\[[[ alert("Изберете час между 10:00 и 18:00!"); ]]]//
+                    …and the date input is reset.
+
+    Responsive Design:
+        The layout adapts for screens under 800px:
+        Navigation switches to vertical menu.
+        Form and image stack vertically.
+        Footer sections stack instead of aligning side-by-side.
+        Adjustments to padding and widths for mobile comfort.
+            
+    Footer:
+        Split contact/info sections with themed colors and rounded containers.
+
+    
 
 
 
