@@ -40,7 +40,7 @@ This project is a responsive appointment booking interface for a nail studio. It
             Rounded corners, Light shadows, Focus on readability and input validation (:invalid border coloring).
 
         Date & Time Picker (Flatpickr):
-            The project uses Flatpickr v4.6.9 to enhance the date-time input with an intuitive UI and built-in restrictions.
+            The project uses Flatpickr v4.6.9 (in the js file) to enhance the date-time input with an intuitive UI and built-in restrictions.
             Features:
                 Date format: YYYY-MM-DD HH:MM
                 Time selection: Enabled, 24-hour format
@@ -65,9 +65,13 @@ This project is a responsive appointment booking interface for a nail studio. It
 
 
 
-    Backend (Flask)
-        This app provides a simple Flask-based API to handle appointment bookings with PostgreSQL integration and email notifications.
+### Backend (Flask)
+    This app provides a simple Flask-based API to handle appointment bookings with PostgreSQL integration and email notifications.
+    I managed to connect the DB to the form. It was my first time facing this method. When I started this project I was not familiar with Django ORM and instead of creating Django Project I used Flask.
+    Because I'm running the project on local host, I didn't manage to send an actual email to my account for the appointment.
 
+## Conclusion
+    I will re-develop this project using Django and extend the logic. This is demo version with one page(Others are not developed).
 
 
 
