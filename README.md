@@ -9,31 +9,31 @@ Website with topic - "nails", for a client. I am working on this at the moment. 
     Screenshot of the main page (max-width: 800px)
 ![Screenshot 2025-04-20 at 11 00 40](https://github.com/user-attachments/assets/933016cf-d122-4fd9-8775-a4d6bc605e7a)<br><br>
 
-This project is a responsive appointment booking interface for a nail studio. It allows clients to easily schedule services like nail building, polishing, and repair (for testing random features for appointment), with date and time selection powered by Flatpickr.<br><br>
+This project is a responsive appointment booking interface for a nail studio. It allows clients to easily schedule services like nail building, polishing, and repair (for testing random features for appointment), with date and time selection powered by Flatpickr.<br><br><br>
 
 ### Visual Elements
     A welcoming image in the header and footer for branding.
     Social media links to Facebook and Instagram.
-    Footer includes contact info and business hours.
+    Footer includes contact info and business hours.<br><br>
 
 ### The top navigation bar provides access to:
     Начало (Home)
     За мен (About)
     Продукти (Products)
     Галерия (Gallery)
-    Услуги (Services)
+    Услуги (Services)<br><br>
 
 ### Users can book appointments by filling out a form that includes:
     - Service selection (dropdown)
     - Date and time picker
     - First name
     - Last name
-    - Phone number (with validation)<br><br>
+    - Phone number (with validation)<br><br><br>
 
 
 ### The UI is focusing on a clean layout with responsive behavior.
     Header: 
-        Moving background with a seamless nail collage using @keyframes moveBackground.
+        Moving background with a seamless nail collage using @keyframes moveBackground.<br><br>
         
     Main Section (Appointment Form):
         Clean form styling with: 
@@ -50,28 +50,30 @@ This project is a responsive appointment booking interface for a nail studio. It
                     \\[[[ alert("Изберете час между 10:00 и 18:00!"); ]]]//
                     …and the date input is reset.
 
-        The form with ID appointment-form uses fetch() to send an asynchronous POST request to a backend endpoint (default)
+        The form with ID appointment-form uses fetch() to send an asynchronous POST request to a backend endpoint (default)<br><br>
 
     Responsive Design:
         The layout adapts for screens under 800px:
         Navigation switches to vertical menu.
         Form and image stack vertically.
         Footer sections stack instead of aligning side-by-side.
-        Adjustments to padding and widths for mobile comfort.
+        Adjustments to padding and widths for mobile comfort.<br><br>
             
     Footer:
-        Split contact/info sections with themed colors and rounded containers.<br><br>
+        Split contact/info sections with themed colors and rounded containers.<br><br><br>
 
 
 
 
 ### Backend (Flask)
+
     This app provides a simple Flask-based API to handle appointment bookings with PostgreSQL integration and email notifications.
     I managed to connect the DB to the form. It was my first time facing this method. When I started this project I was not familiar with Django ORM and instead of creating Django Project I used Flask.
-    Because I'm running the project on local host, I didn't manage to send an actual email to my account for the appointment.
+    Because I'm running the project on local host, I didn't manage to send an actual email to my account for the appointment.<br><br><br>
 
 ## Conclusion
-    I will re-develop this project using Django and extend the logic. This is demo version with one page(Others are not developed).
+
+    I will re-develop this project using Django and extend the logic. This is demo version with one page(Others are not developed).<br><br><br>
 
 
 
