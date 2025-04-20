@@ -3,7 +3,7 @@ Website with topic - "nails", for a client. I am working on this at the moment. 
 
 
     Screenshot of the main page
-![Screenshot 2025-04-20 at 11 01 02](https://github.com/user-attachments/assets/818b162e-0d79-41b9-9195-6e870e44fe33)<br><br>
+![Screenshot 2025-04-20 at 11 01 02](https://github.com/user-attachments/assets/818b162e-0d79-41b9-9195-6e870e44fe33)
 
 
     Screenshot of the main page (max-width: 800px)
