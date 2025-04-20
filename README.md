@@ -75,7 +75,7 @@ This project is a responsive appointment booking interface for a nail studio. It
 ## Conclusion
 
     I will re-develop this project using Django and extend the logic. This is demo version with one page(Others are not developed).
-    The documentation is not that detailed, but it is enough to give an overview of the project itself.<br><br><br>
+    The documentation is not that detailed, but it is enough to give an overview of the project itself.
 
 
 
