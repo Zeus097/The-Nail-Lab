@@ -15,23 +15,23 @@ This project is a responsive appointment booking interface for a nail studio. It
 ### Visual Elements
     A welcoming image in the header and footer for branding.
     Social media links to Facebook and Instagram.
-    Footer includes contact info and business hours.<br><br>
+    Footer includes contact info and business hours.
 
 ### The top navigation bar provides access to:
     Начало (Home)
     За мен (About)
     Продукти (Products)
     Галерия (Gallery)
-    Услуги (Services)<br><br>
+    Услуги (Services)
 
 ### Users can book appointments by filling out a form that includes:
     - Service selection (dropdown)
     - Date and time picker
     - First name
     - Last name
-    - Phone number (with validation)<br><br><br>
+    - Phone number (with validation)
 
-
+****
 ### The UI is focusing on a clean layout with responsive behavior.
     Header: 
         Moving background with a seamless nail collage using @keyframes moveBackground.<br><br>
@@ -51,7 +51,7 @@ This project is a responsive appointment booking interface for a nail studio. It
                     \\[[[ alert("Изберете час между 10:00 и 18:00!"); ]]]//
                     …and the date input is reset.
 
-        The form with ID appointment-form uses fetch() to send an asynchronous POST request to a backend endpoint (default)<br><br>
+        The form with ID appointment-form uses fetch() to send an asynchronous POST request to a backend endpoint (default)
 
     Responsive Design:
         The layout adapts for screens under 800px:
@@ -61,17 +61,18 @@ This project is a responsive appointment booking interface for a nail studio. It
         Adjustments to padding and widths for mobile comfort.<br><br>
             
     Footer:
-        Split contact/info sections with themed colors and rounded containers.<br><br><br>
+        Split contact/info sections with themed colors and rounded containers.
 
 
 
-
+<br><br><br>
 ### Backend (Flask)
 
     This app provides a simple Flask-based API to handle appointment bookings with PostgreSQL integration and email notifications.
     I managed to connect the DB to the form. It was my first time facing this method. When I started this project I was not familiar with Django ORM and instead of creating Django Project I used Flask.
-    Because I'm running the project on local host, I didn't manage to send an actual email to my account for the appointment.<br><br><br>
+    Because I'm running the project on local host, I didn't manage to send an actual email to my account for the appointment.
 
+<br><br><br>
 ## Conclusion
 
     I will re-develop this project using Django and extend the logic. This is demo version with one page(Others are not developed).
