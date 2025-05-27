@@ -1,0 +1,16 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Flask",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/nail_lab.py",
+            "args": ["run"],
+            "jinja": true,
+            "env": {
+                "FLASK_ENV": "development"
+            }
+        }
+    ]
+}

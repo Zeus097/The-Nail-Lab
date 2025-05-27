@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@fontsource-variable/jetbrains-mono": "^5.1.2",
+    "cors": "^2.8.5"
+  }
+}

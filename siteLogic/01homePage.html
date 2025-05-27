@@ -1,0 +1,151 @@
+<!--
+Flatpickr v4.6.9
+Copyright (c) 2025 Samuel Sharp
+Licensed under the MIT License (https://opensource.org/licenses/MIT)
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Nail Lab</title>
+    <link rel="stylesheet" href="webPage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.9/flatpickr.min.css">
+    <script src="https://kit.fontawesome.com/305e1f6e92.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="fonts/jetbrains-mono.css">
+</head>
+<body>
+
+    <header>
+
+        <div class="welcome-img"></div>
+
+        <div class="nav-menu">
+
+            <nav>
+                <ul class="mainMenu">
+                    <li><a href="01homePage.html">НАЧАЛО</a></li>
+                    <li><a href="02forMe.html">ЗА МЕН</a></li>
+                    <li><a href="03products.html">ПРОДУКТИ</a></li>
+                    <li><a href="04galery.html">ГАЛЕРИЯ</a></li>
+                    <li><a href="05services.html">УСЛУГИ</a></li>
+                </ul>
+            </nav>
+
+        </div>
+        
+    </header>
+
+    <main>
+
+        <h1 class="appointment-header">Записване на час</h1>
+        
+        <section class="appointment">
+
+            <div class="appointment-img">
+                <img src="images/appointment.jpeg" alt="appointment image">
+            </div>
+
+            <div class="appointment-content">
+
+                <form class="appointment-form" id="appointment-form" action="http://127.0.0.1:5500" method="POST">
+                    <label for="service">Изберете услуга:</label>
+                    <select id="service" name="service" required>
+                        <option value="">-- Изберете --</option>
+                        <option value="Изграждане">Изграждане</option>
+                        <option value="Лакиране">Лакиране</option>
+                        <option value="Поправяне на нокти">Поправяне на нокти</option>
+                    </select>
+                
+                    <label for="date">Изберете дата и час:</label>
+                    <input type="text" id="date" name="date" required />
+                
+                    <label for="first_name">Вашето име:</label>
+                    <input type="text" id="first_name" name="first_name" placeholder="Име..." required />
+                
+                    <label for="last_name">Вашата фамилия:</label>
+                    <input type="text" id="last_name" name="last_name" placeholder="Фамилия..." required />
+                
+                    <label for="phone">Телефон за връзка:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Вашият телефон" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" required />
+                
+                    <button type="submit">Запази час</button>
+                </form>
+                
+                
+            
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.9/flatpickr.min.js"></script>
+                <script src="script.js"></script>
+    
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        
+        <div class="footer-column">
+            
+            <h1><span class="blue-i">The </span>Nail Lab Petya</h1>
+            
+            <div class="footer-icon-row">
+                
+                <div class="footer-icon-bg facebook-footer">
+                    <a href="https://www.facebook.com/petiinka.georgiiewa" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                </div>
+
+                <div class="footer-icon-bg instagram-footer">
+                    <a href="https://www.instagram.com/p.georgievaa/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                </div>
+
+            </div>
+
+            <div class="get-in-touch">
+
+                <div class="get-in-touch-column-left">
+                    <h3>КОНТАКТ</h3>
+                    <p>гр. Търговище, ул. “Сердика”5</p>
+                    <p><a class="phone-number" href="tel:+359 87 6706061">тел: +359 87 6706061</a></p>
+                </div>
+
+                <div class="footer-separator"></div>
+    
+                <div class="get-in-touch-column-right">
+                    <h3>РАБОТНО ВРЕМЕ</h3>
+                    <p>ПОН - ПТК, 10:00 - 18:00</p>
+                    <p>НЕДЕЛЯ: ЗАТВОРЕНО</p>
+                </div>
+    
+            </div>
+
+            <p class="rights">© All Rights Reserved.</p>
+
+        </div>
+
+        <div class="welcome-img footer-img"></div>
+
+    </footer>
+
+</body>
+</html>
